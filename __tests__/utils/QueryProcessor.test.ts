@@ -26,4 +26,14 @@ describe("QueryProcessor", () => {
             "akobaida"
           ));
     });
+
+    // TODO: You should update the test below after you add your name
+    test('should return my name', () => {
+        const query = "What is your name?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "your_name_here"
+        ));
+    });
+
 });
