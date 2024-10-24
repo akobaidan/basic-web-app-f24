@@ -31,10 +31,8 @@ describe("QueryProcessor", () => {
     test('should return my name', () => {
         const query = "What is your name?";
         const response: string = QueryProcessor(query);
-        expect(response).toBe((
-            "Ahmad"
-        ));
-    });
+        expect(response).toBe("Ahmad");
+    });    
 
     // Test for 37 plus 43
     test('should return the sum of 37 and 43', () => {
