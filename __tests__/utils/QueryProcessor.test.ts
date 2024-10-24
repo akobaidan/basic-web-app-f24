@@ -32,7 +32,7 @@ describe("QueryProcessor", () => {
         const query = "What is your name?";
         const response: string = QueryProcessor(query);
         expect(response).toBe((
-            "your_name_here"
+            "Ahmad"
         ));
     });
 
@@ -40,27 +40,24 @@ describe("QueryProcessor", () => {
     test('should return the sum of 37 and 43', () => {
         const query = "What is 37 plus 43?";
         const response: string = QueryProcessor(query);
-        expect(response).toBe((
-            "80"
-        ));
+        const expectedResponse = (37 + 43).toString();
+        expect(response).toBe(expectedResponse);
     });
 
     // Test for 27 plus 70
     test('should return the sum of 27 and 70', () => {
         const query = "What is 27 plus 70?";
         const response: string = QueryProcessor(query);
-        expect(response).toBe((
-            "97"
-        ));
+        const expectedResponse = (27 + 70).toString();
+        expect(response).toBe(expectedResponse);
     });
 
     // Test for finding the largest number
     test('should return the largest number among 24, 83, and 10', () => {
         const query = "Which of the following numbers is the largest: 24, 83, 10?";
         const response: string = QueryProcessor(query);
-        expect(response).toBe((
-            "83"
-        ));
+        const expectedResponse = Math.max(24, 83, 10).toString();
+        expect(response).toBe(expectedResponse);
     });
 
 });
